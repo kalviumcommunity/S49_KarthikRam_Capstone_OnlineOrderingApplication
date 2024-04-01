@@ -7,7 +7,7 @@ homeRoute.get('/homepage', (req, res)=>{
         const data = {message: "homepage data"}
         res.json(data)
     }catch(err){
-        res.status(500).json({error: "Internal server error"})
+        res.send("Internal server error", err)
     }
 })
 
