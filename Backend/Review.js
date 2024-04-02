@@ -1,6 +1,6 @@
 const express = require("express")
 const review = express.Router()
-const ReviewModel = require('./Models/BagModel')
+const ReviewModel = require('./Models/ReviewModel')
 
 review.post('/review', async(req, res)=>{
     console.log(req.body)
