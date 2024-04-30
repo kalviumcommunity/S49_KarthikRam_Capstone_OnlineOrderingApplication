@@ -4,7 +4,7 @@ const HomepageSchema = mongoose.Schema({
     name : String,
     img: String,
     price: Number,
-    available: String,
+    available: Boolean,
     category: String
 })
 
