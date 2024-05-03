@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './Navbar.css'
 
 const Navbar = () => {
   const [prevScrollpos, setPrevScrollpos] = useState(0);
@@ -6,10 +7,10 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+      if (prevScrollpos < currentScrollPos) {
+        document.getElementById("navbar").style.top = "-120px";
       } else {
-        document.getElementById("navbar").style.top = "-50px";
+        document.getElementById("navbar").style.top = "0";
       }
       setPrevScrollpos(currentScrollPos);
     };
