@@ -1,21 +1,40 @@
+.Navbar{
+  display: flex;
+  justify-content: space-between;
+}
+
 #navbar {
-  background-color: #333;
+  background-color: white;
   position: sticky;
   top: 0;
   width: 100%;
   transition: top 0.6s;
+  border-bottom: 2px solid black;
 }
 
 #navbar #a {
   float: left;
   display: block;
-  color: white;
+  color: black;
   text-align: center;
-  padding: 15px;
   text-decoration: none;
 }
 
+#a{
+  padding: 0vw 1vw;
+}
+
 #navbar #a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333333;
+  color: white;
+}
+
+Link{
+  text-decoration: none;
+  color: white;
+}
+
+.Navbar a {
+  text-decoration: none;
+  color: inherit;
 }

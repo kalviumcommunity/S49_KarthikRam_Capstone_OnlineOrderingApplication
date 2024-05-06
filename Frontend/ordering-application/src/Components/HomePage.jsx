@@ -84,7 +84,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div>
+    <div className="mainHompage">
       <Navbar />
       <div className="offers">
         <p>Here goes the offer</p>
@@ -137,6 +137,7 @@ function HomePage() {
           </div>
         </div>
       </div> */}
+      <hr />
       <div className="Dosa">
         <h1 className="DosaHeading">Dosa</h1>
         <div className="DosaImage" style={{ textAlign: "center" }}>

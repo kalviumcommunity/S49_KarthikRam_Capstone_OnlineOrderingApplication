@@ -1,3 +1,7 @@
+.mainHompage{
+  background-color: #EDF1E2;
+}
+
 .flex {
   display: flex;
 }
@@ -17,6 +21,7 @@
   text-align: center;
   border: 2px solid black;
   border-radius: 10px;
+  background-color: #F8F5ED;
 }
 
 .offerText{
@@ -35,6 +40,7 @@
   border: 2px solid black;
   text-align: center;
   border-radius: 5px;
+  background-color: #89BEB2;
 }
 
 .DishImage {
