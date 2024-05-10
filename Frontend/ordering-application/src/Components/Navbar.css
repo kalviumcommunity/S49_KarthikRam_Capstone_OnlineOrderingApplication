@@ -38,3 +38,8 @@ Link{
   text-decoration: none;
   color: inherit;
 }
+
+.bag-account{
+  font-size: 1.2rem;
+  align-items: center;
+}

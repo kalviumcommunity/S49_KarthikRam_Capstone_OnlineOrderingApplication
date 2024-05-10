@@ -1,0 +1,60 @@
+body{
+    background-color: #EDF1E2;
+}
+
+.account{
+    margin: 2vw 10vw;
+}
+
+.account-offer{
+    border: 1px solid black;
+    border-radius: 35px;
+}
+
+.account-offer-display{
+    height: 12vw;
+    text-align: center;
+}
+
+.account-offer-wordings{
+    overflow: hidden;
+    text-align: center;
+    height: 3vw;
+    border-top: 2px solid black;
+}
+
+.review-button{
+    margin: 4vw 0vw;
+    text-align: right;
+}
+
+.review-button button{
+    padding: 0.5vw;
+}
+
+.account-grid-border{
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.account-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 4vw;
+}
+
+.account-gird-images{
+    height: 11vw;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-gird-names{
+    height: 3vw;
+    border-top: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    filter: blur(0.3px);
+}
