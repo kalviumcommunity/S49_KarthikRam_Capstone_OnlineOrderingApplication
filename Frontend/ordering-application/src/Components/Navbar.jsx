@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import {Link} from 'react-router-dom'
+import { CgProfile } from "react-icons/cg";
+import { IoBagOutline } from "react-icons/io5";
 import './Navbar.css'
 
 const Navbar = () => {
@@ -41,9 +43,9 @@ const Navbar = () => {
       <div>
         <h1 id="a"><Link to='/' onClick={handleRefresh}>Naidu Hotel</Link></h1>
       </div>
-      <div className="flex">
-        <h2 id="a"><Link to='/bag'>Bag</Link></h2>
-        <h2 id="a"><Link to="/account">Account</Link></h2>
+      <div className="flex bag-account">
+        <h2 id="a"><Link to='/bag'><IoBagOutline/></Link></h2>
+        <h2 id="a"><Link to="/account"><CgProfile/></Link></h2>
       </div>
     </div>
   );

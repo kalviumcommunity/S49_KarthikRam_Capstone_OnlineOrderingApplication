@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import { MdCheckBox, MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import {IoStarSharp} from "react-icons/io5"
 import "./Homepage.css";
 import Navbar from "./Navbar";
 import eggDosa from "./Images/eggDosa.png";
@@ -137,6 +140,8 @@ function HomePage() {
           </div>
         </div>
       </div> */}
+      <MdKeyboardArrowLeft />
+      <MdKeyboardArrowRight />
       <hr />
       <div className="Dosa">
         <h1 className="DosaHeading">Dosa</h1>
@@ -159,6 +164,9 @@ function HomePage() {
                     />
                   )}
                   <h3>{item.price}</h3>
+                  <div>
+                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                  </div>
                   <h3>{item.available}</h3>
                 </div>
               );
@@ -187,6 +195,9 @@ function HomePage() {
                     />
                   )}
                   <h3>{item.price}</h3>
+                  <div>
+                    <IoStarSharp style={{ color: "black", border: '1px solid black', padding: '2px', backgroundColor: 'white'}} />
+                  </div>
                   <h3>{item.available}</h3>
                 </div>
               );
@@ -215,6 +226,9 @@ function HomePage() {
                     />
                   )}
                   <h3>{item.price}</h3>
+                  <div>
+                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                  </div>
                   <h3>{item.available}</h3>
                 </div>
               );
@@ -243,6 +257,9 @@ function HomePage() {
                     />
                   )}
                   <h3>{item.price}</h3>
+                  <div>
+                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                  </div>
                   <h3>{item.available}</h3>
                 </div>
               );
@@ -271,6 +288,9 @@ function HomePage() {
                     />
                   )}
                   <h3>{item.price}</h3>
+                  <div>
+                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                  </div>
                   <h3>{item.available}</h3>
                 </div>
               );
@@ -299,6 +319,9 @@ function HomePage() {
                     />
                   )}
                   <h3>{item.price}</h3>
+                  <div>
+                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                  </div>
                   <h3>{item.available}</h3>
                 </div>
               );
@@ -327,6 +350,9 @@ function HomePage() {
                     />
                   )}
                   <h3>{item.price}</h3>
+                  <div>
+                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                  </div>
                   <h3>{item.available}</h3>
                 </div>
               );
