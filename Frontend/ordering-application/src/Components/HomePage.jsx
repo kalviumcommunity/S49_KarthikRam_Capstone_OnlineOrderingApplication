@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { MdCheckBox, MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import {IoStarSharp} from "react-icons/io5"
+import { IoStarSharp } from "react-icons/io5";
 import "./Homepage.css";
 import Navbar from "./Navbar";
 import eggDosa from "./Images/eggDosa.png";
@@ -89,6 +89,7 @@ function HomePage() {
   return (
     <div className="mainHompage">
       <Navbar />
+      {/* <MdCheckBox/> */}
       <div className="offers">
         <p>Here goes the offer</p>
       </div>
@@ -126,48 +127,45 @@ function HomePage() {
           <p className="item10">Item10</p>
         </div>
       </div>
-      {/* <div className="food1">
-        <div>
-          <img src={plainDosa} alt="Plain Dosa" />
-        </div>
-        <div>
-          <div>
-            <p>Price</p>
-          </div>
-          <div className="flex">
-            <p>yo</p>
-            <p>yoooo</p>
-          </div>
-        </div>
-      </div> */}
-      <MdKeyboardArrowLeft />
-      <MdKeyboardArrowRight />
       <hr />
       <div className="Dosa">
         <h1 className="DosaHeading">Dosa</h1>
         <div className="DosaImage" style={{ textAlign: "center" }}>
           <img src={plainDosa} alt="Dosa" className="DishImage" />
         </div>
-        <div className="DosaItems flex ItemsList scroll">
+        <div className="DosaItems">
           {apiData
             .filter((item) => item.category == "Dosa")
             .map((item) => {
               const DosaComponent = DosaMap[item.img];
               return (
-                <div key={item._id}>
-                  <h1>{item.name}</h1>
-                  {DosaComponent && (
-                    <img
-                      src={DosaComponent}
-                      alt={item.name}
-                      className="ItemImage"
-                    />
-                  )}
-                  <h3>{item.price}</h3>
-                  <div>
-                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                <div key={item.name}>
+                  <MdKeyboardArrowLeft />
+                  <div key={item._id} className="flex item-main-div">
+                    <div className="flex sub-div-one">
+                      {DosaComponent && (
+                        <img
+                          src={DosaComponent}
+                          alt={item.name}
+                          className="ItemImage"
+                        />
+                      )}
+                    </div>
+                    <div className="sub-div-two">
+                      <div className="availability">
+                        <p>{item.available}</p>
+                      </div>
+                      <div className="flex price-icon">
+                        <p>{item.price}</p>
+                        <IoStarSharp className="icon" />
+                      </div>
+                      <div className="addToCartDiv">
+                        <button className="addToCartButton">Add to cart</button>
+                      </div>
+                    </div>
+                    <p className="sub-div-three">{item.name}</p>
                   </div>
-                  <h3>{item.available}</h3>
+                  <MdKeyboardArrowRight />
                 </div>
               );
             })}
@@ -179,7 +177,7 @@ function HomePage() {
         <div className="IdliImage" style={{ textAlign: "center" }}>
           <img src={idli} alt="Idli" className="DishImage" />
         </div>
-        <div className="IdliItems flex ItemsList">
+        <div className="IdliItems flex">
           {apiData
             .filter((item) => item.category == "Idli")
             .map((item) => {
@@ -196,7 +194,14 @@ function HomePage() {
                   )}
                   <h3>{item.price}</h3>
                   <div>
-                    <IoStarSharp style={{ color: "black", border: '1px solid black', padding: '2px', backgroundColor: 'white'}} />
+                    <IoStarSharp
+                      style={{
+                        color: "black",
+                        border: "1px solid black",
+                        padding: "2px",
+                        backgroundColor: "white",
+                      }}
+                    />
                   </div>
                   <h3>{item.available}</h3>
                 </div>
@@ -210,7 +215,7 @@ function HomePage() {
         <div className="PorottaImage" style={{ textAlign: "center" }}>
           <img src={porotta} alt="Porotta" className="DishImage" />
         </div>
-        <div className="PorottaItems flex ItemsList">
+        <div className="PorottaItems flex">
           {apiData
             .filter((item) => item.category == "Porotta")
             .map((item) => {
@@ -227,7 +232,14 @@ function HomePage() {
                   )}
                   <h3>{item.price}</h3>
                   <div>
-                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                    <IoStarSharp
+                      style={{
+                        color: "white",
+                        border: "1px solid black",
+                        padding: "2px",
+                        backgroundColor: "gold",
+                      }}
+                    />
                   </div>
                   <h3>{item.available}</h3>
                 </div>
@@ -241,7 +253,7 @@ function HomePage() {
         <div className="EggImage" style={{ textAlign: "center" }}>
           <img src={omelette} alt="Egg" className="DishImage" />
         </div>
-        <div className="EggItems flex ItemsList">
+        <div className="EggItems flex">
           {apiData
             .filter((item) => item.category == "Egg")
             .map((item) => {
@@ -258,7 +270,14 @@ function HomePage() {
                   )}
                   <h3>{item.price}</h3>
                   <div>
-                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                    <IoStarSharp
+                      style={{
+                        color: "white",
+                        border: "1px solid black",
+                        padding: "2px",
+                        backgroundColor: "gold",
+                      }}
+                    />
                   </div>
                   <h3>{item.available}</h3>
                 </div>
@@ -272,7 +291,7 @@ function HomePage() {
         <div className="ChapathiImage" style={{ textAlign: "center" }}>
           <img src={chapathi} alt="Chapathi" className="DishImage" />
         </div>
-        <div className="ChapathiItems flex ItemsList">
+        <div className="ChapathiItems flex">
           {apiData
             .filter((item) => item.category == "Chapathi")
             .map((item) => {
@@ -289,7 +308,14 @@ function HomePage() {
                   )}
                   <h3>{item.price}</h3>
                   <div>
-                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                    <IoStarSharp
+                      style={{
+                        color: "white",
+                        border: "1px solid black",
+                        padding: "2px",
+                        backgroundColor: "gold",
+                      }}
+                    />
                   </div>
                   <h3>{item.available}</h3>
                 </div>
@@ -303,7 +329,7 @@ function HomePage() {
         <div className="RiceImage" style={{ textAlign: "center" }}>
           <img src={pongal} alt="Rice" className="DishImage" />
         </div>
-        <div className="RiceItems flex ItemsList">
+        <div className="RiceItems flex">
           {apiData
             .filter((item) => item.category == "Rice")
             .map((item) => {
@@ -320,7 +346,14 @@ function HomePage() {
                   )}
                   <h3>{item.price}</h3>
                   <div>
-                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                    <IoStarSharp
+                      style={{
+                        color: "white",
+                        border: "1px solid black",
+                        padding: "2px",
+                        backgroundColor: "gold",
+                      }}
+                    />
                   </div>
                   <h3>{item.available}</h3>
                 </div>
@@ -334,7 +367,7 @@ function HomePage() {
         <div className="VadaImage" style={{ textAlign: "center" }}>
           <img src={vada} alt="Vada" className="DishImage" />
         </div>
-        <div className="VadaItems flex ItemsList">
+        <div className="VadaItems flex">
           {apiData
             .filter((item) => item.category == "Vada")
             .map((item) => {
@@ -351,7 +384,14 @@ function HomePage() {
                   )}
                   <h3>{item.price}</h3>
                   <div>
-                    <IoStarSharp style={{ color: "white", border: '1px solid black', padding: '2px', backgroundColor: 'gold'}} />
+                    <IoStarSharp
+                      style={{
+                        color: "white",
+                        border: "1px solid black",
+                        padding: "2px",
+                        backgroundColor: "gold",
+                      }}
+                    />
                   </div>
                   <h3>{item.available}</h3>
                 </div>

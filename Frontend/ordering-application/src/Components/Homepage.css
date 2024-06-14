@@ -32,8 +32,8 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 4vw 10vw;
-  margin: 5vh 15vh;
+  grid-gap: 4vw 6vw;
+  margin: 5vh 20vh;
 }
 
 .itembox{
@@ -47,6 +47,65 @@
   height: 20vw;
 }
 
-.ItemImage {
+.item-main-div{
+  max-width: 24vw;
+  border:1px solid black;
+  flex-direction:column;
+}
+
+.sub-div-one{
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.ItemImage{
   height: 10vw;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.sub-div-two{
+  background-color: #F0EDE8;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-top:-5vw;
+}
+
+.availability{
+  margin-top: 6vw;
+  font-size: 0.85rem;
+}
+
+.price-icon{
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5vw;
+  font-size: 1.4rem;
+}
+
+.icon{
+  color: white;
+  font-size: 1.7rem;
+  stroke: black;
+  stroke-width: 5;
+}
+
+.addToCartDiv{
+  margin: 1vw 0;
+}
+
+.addToCartButton{
+  font-size: 1rem;
+  padding: 0.5vw 1vw;
+  border: 1pxsolid black;
+  background-color:white;
+}
+
+.sub-div-three{
+  text-align: center;
+  font-size: 1.6rem;
 }
