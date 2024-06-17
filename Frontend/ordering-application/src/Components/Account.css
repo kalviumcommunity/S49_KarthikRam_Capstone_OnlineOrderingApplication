@@ -58,3 +58,11 @@ body{
     align-items: center;
     filter: blur(0.3px);
 }
+
+.back-icon{
+    font-size: 3.5vw;
+}
+
+.back-icon:hover{
+    cursor: pointer;
+}
