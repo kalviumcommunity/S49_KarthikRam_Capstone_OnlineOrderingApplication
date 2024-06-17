@@ -1,14 +1,25 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
 import dummydata from './DummyData.json'
+import { MdKeyboardArrowLeft } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import chapathi from "./Images/chapathi.png";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 
 function Bag() {
+  const Navigate = useNavigate();
+
+  const handleBack = ()=>{
+    Navigate('/')
+  }
+
   return (
     <div style={{margin: '0vw 4vw'}}>
-      <h1>Your Bag</h1>
+      <div className='flex' style={{alignItems:'center'}}>
+      <MdKeyboardArrowLeft className='back-icon' onClick={handleBack}/>
+      <h1 style={{paddingLeft: "1.5vw"}}>Your Bag</h1>
+      </div>
       <div className="bag-items" style={{margin: '0vw 18vw',padding:'0 8vw', borderBottom: '1px solid black', maxHeight:'30vw',overflowY:'scroll', scrollbarWidth: 'none'}}>
             {dummydata.map((item)=>{
               return(

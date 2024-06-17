@@ -4,11 +4,20 @@ import { CiShoppingCart } from "react-icons/ci";
 import {IoStarSharp} from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
 import { PiPaperPlaneTiltDuotone } from "react-icons/pi";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import {useNavigate } from 'react-router-dom';
 
 function Account() {
+  const Navigate = useNavigate()
+
+  const handleBack = ()=>{
+    Navigate('/')
+  }
+
   return (
     <div className='account'>
       <div className="account-offer">
+      <MdKeyboardArrowLeft className='back-icon' onClick={handleBack} style={{position: 'fixed', left: '4vw', top:'1vw'}} />
         <div className="account-offer-display">
           Random img
         </div>
