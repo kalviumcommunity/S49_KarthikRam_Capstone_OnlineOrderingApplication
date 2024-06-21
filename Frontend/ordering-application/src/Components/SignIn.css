@@ -21,7 +21,8 @@ input {
 }
 
 .input-element {
-    margin-top: 20px;
+    flex-direction: column;
+
 }
 
 .registerbtn {
@@ -49,5 +50,10 @@ input {
 .form-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0vw 3vw;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1vw 3vw;
+}
+
+label{
+    margin: 0 0 0.5vw 0.5vw;
 }
