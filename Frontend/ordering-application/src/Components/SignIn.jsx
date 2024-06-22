@@ -16,6 +16,8 @@ function SignIn() {
 
   const onSub = async (info) => {
     console.log(info)
+    setError('')
+    setSuccess(false)
 
     try {
       const response = await axios.post('http://localhost:3000/api/loginData', {
@@ -26,10 +28,18 @@ function SignIn() {
       })
       console.log(response.data)
       setSuccess(true)
+      localStorage.setItem('token', response.data.token);
+      axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+      //This approach of using headers ensures that the token is
+      //automatically included in all Axios requests after it has been set.
       setError(null)
     } catch (err) {
       console.error('Error:', err)
-      setError('Registration failed. Please try again.')
+      if (err.response && err.response.status === 409) {
+        setError('User already exists');
+      } else {
+        setError('Registration failed. Please try again.')
+      }
     }
   }
 
