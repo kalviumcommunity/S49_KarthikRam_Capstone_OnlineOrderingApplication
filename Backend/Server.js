@@ -23,8 +23,11 @@ const homeRoute = require("./HomepageRoute");
 const bagRoute = require('./BagRoute');
 const Review = require("./Review");
 const SignInRoute = require('./SignIn')
+const loginRoute = require('./Login')
+const AuthMiddleware = require('./AuthMiddleware')
+const ProtectedRoute = require('./ProtectedRoute')
 
-app.use('/api', homeRoute, Review, SignInRoute);
+app.use('/api', homeRoute, Review, SignInRoute, loginRoute, AuthMiddleware, ProtectedRoute);
 app.use('/bag', bagRoute);
 
 const port = process.env.PORT;
