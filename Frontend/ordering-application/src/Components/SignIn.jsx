@@ -28,10 +28,6 @@ function SignIn() {
       })
       console.log(response.data)
       setSuccess(true)
-      localStorage.setItem('token', response.data.token);
-      axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
-      //This approach of using headers ensures that the token is
-      //automatically included in all Axios requests after it has been set.
       setError(null)
     } catch (err) {
       console.error('Error:', err)

@@ -3,6 +3,9 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const loginRoute = express.Router()
 const SignInModel = require('../Backend/Models/SignInModel')
+require('dotenv').config()
+
+const secret = process.env.SECRET
 
 loginRoute.post('/login', async (req, res) => {
   const { email, password } = req.body
@@ -20,9 +23,15 @@ loginRoute.post('/login', async (req, res) => {
 
     const token = jwt.sign(
       { userId: user._id, email: user.email },
-      'your_jwt_secret',
+      secret,
       { expiresIn: '1h' }
     )
+
+    res.cookie('token', token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      maxAge: 3600000
+    });
 
     res.json({ message: 'Login successful', token })
   } catch (err) {
