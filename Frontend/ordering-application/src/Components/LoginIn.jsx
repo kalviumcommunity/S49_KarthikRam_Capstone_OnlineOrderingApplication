@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
 
@@ -15,15 +15,30 @@ function LoginIn() {
       const response = await axios.post('http://localhost:3000/api/login', {
         email: data.email,
         password: data.password,
+      },{
+        withCredentials: true
       })
       console.log('Login successful:', response.data)
       setSuccess(true)
-      localStorage.setItem('token', response.data.token)
+      // localStorage.setItem('token', response.data.token)
+      //###
+      //This approach of using headers ensures that the token is
+      //automatically included in all Axios requests after it has been set.
+      // axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`
     } catch (err) {
       console.error('Error during login:', err)
       setError('Login failed. Please check your credentials.')
     }
   }
+
+  const logout = async () => {
+    try {
+      await axios.post('http://localhost:3000/api/logout', {}, { withCredentials: true });
+      console.log('Logout successful');
+    } catch (error) {
+      console.error('Error during logout:', error);
+    }
+  };
   
   return (
     <div style={{ margin: '2vw 5vw' }}>
@@ -66,6 +81,7 @@ function LoginIn() {
           </div>
         </form>
       </div>
+      <button onClick={logout}>Logout</button>
     </div>
   );
 }
