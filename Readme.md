@@ -49,3 +49,5 @@ This project utilises the **MERN** stack for fully fledged data sharing. Various
 ![Information Architecture](./images/IA.jpg)
 
 ---
+
+[Front end deployed link] (https://naiduhotel.netlify.app/)
