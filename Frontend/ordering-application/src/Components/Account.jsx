@@ -6,6 +6,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { PiPaperPlaneTiltDuotone } from "react-icons/pi";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import {useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Account() {
   const Navigate = useNavigate()
@@ -30,36 +31,44 @@ function Account() {
       </div>
       <div className="account-grid">
         <div className="profile account-grid-border">
-          <div className="account-profile-image account-gird-images flex">
-            <CgProfile style={{fontSize: '7rem'}}/>
-          </div>
-          <div className="account-profile-name account-gird-names flex" style={{backgroundColor: '#EA9A3C'}}>
-            name
-          </div>
+          <Link to="/profile" className='link-style'>
+            <div className="account-profile-image account-gird-images flex">
+              <CgProfile style={{fontSize: '7rem'}}/>
+            </div>
+            <div className="account-profile-name account-gird-names flex" style={{backgroundColor: '#EA9A3C'}}>
+              name
+            </div>
+          </Link>
         </div>
         <div className="orders account-grid-border">
-          <div className="account-orders-image account-gird-images flex">
-            <CiShoppingCart style={{fontSize: '7rem'}}/>
-          </div>
-          <div className="account-orders-name account-gird-names flex" style={{backgroundColor: '#F0EDE8'}}>
-            name
-          </div>
+          <Link to="/orders" className='link-style'>
+            <div className="account-orders-image account-gird-images flex">
+              <CiShoppingCart style={{fontSize: '7rem'}}/>
+            </div>
+            <div className="account-orders-name account-gird-names flex" style={{backgroundColor: '#F0EDE8'}}>
+              name
+            </div>
+          </Link>
         </div>
         <div className="favourites account-grid-border">
-          <div className="account-favourites-image account-gird-images flex">
-            <IoStarSharp style={{fontSize: '7rem', color:'gold'}}/>
-          </div>
-          <div className="account-favourites-name account-gird-names flex" style={{backgroundColor: 'gold'}}>
-            name
-          </div>
+          <Link to="/account" className='link-style'>
+            <div className="account-favourites-image account-gird-images flex">
+              <IoStarSharp style={{fontSize: '7rem', color:'gold'}}/>
+            </div>
+            <div className="account-favourites-name account-gird-names flex" style={{backgroundColor: 'gold'}}>
+              name
+            </div>
+          </Link>
         </div>
         <div className="settings account-grid-border">
-          <div className="account-settings-image account-gird-images flex">
-            <IoSettingsOutline style={{fontSize: '7rem'}}/>
-          </div>
-          <div className="account-settings-name account-gird-names flex" style={{backgroundColor: '#89BEB2'}}>
-            name
-          </div>
+          <Link to="/settings" className='link-style'>
+            <div className="account-settings-image account-gird-images flex">
+              <IoSettingsOutline style={{fontSize: '7rem'}}/>
+            </div>
+            <div className="account-settings-name account-gird-names flex" style={{backgroundColor: '#89BEB2'}}>
+              name
+            </div>
+          </Link>
         </div>
       </div>
     </div>

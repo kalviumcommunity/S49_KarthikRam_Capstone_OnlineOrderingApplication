@@ -7,6 +7,10 @@ import Account from "./Components/Account";
 import SignIn from "./Components/SignIn"; 
 import LoginIn from "./Components/LoginIn";
 // import Navbar from "./Components/Navbar";
+import Favourites from "./Components/Favourites";
+import Orders from "./Components/Orders";
+import Profile from "./Components/Profile";
+import Settings from "./Components/Settings";
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
         <Route path="/" element={<HomePage />} /> 
         <Route path="/sign-in" element={<SignIn/>}/>
         <Route path="/login" element={<LoginIn/>}/>
+        <Route path="/favourites" element={<Favourites/>}/>
+        <Route path="/orders" element={<Orders/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/settings" element={<Settings/>}/>
       </Routes>
     </Router>
   );
