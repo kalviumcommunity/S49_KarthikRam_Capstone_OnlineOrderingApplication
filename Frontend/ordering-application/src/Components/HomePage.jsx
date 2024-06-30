@@ -3,6 +3,7 @@ import axios from "axios";
 // import { MdKeyboardArrowLeft } from "react-icons/md";
 // import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoStarSharp } from "react-icons/io5";
+import { MdCurrencyRupee } from "react-icons/md";
 import "./Homepage.css";
 import Navbar from "./Navbar";
 import eggDosa from "./Images/eggDosa.png";
@@ -143,7 +144,6 @@ function HomePage() {
                 const DosaComponent = DosaMap[item.img];
                 return (
                   <div key={item.name}>
-                    
                       <div key={item._id} className="flex item-main-div">
                         <div className="flex sub-div-one">
                           {DosaComponent && (
@@ -156,10 +156,10 @@ function HomePage() {
                         </div>
                         <div className="sub-div-two">
                           <div className="availability">
-                            <p>{item.available}</p>
+                            <p>{item.available}True</p>
                           </div>
                           <div className="flex price-icon">
-                            <p>{item.price}</p>
+                            <p className="flex"><MdCurrencyRupee/>{item.price}</p>
                             <IoStarSharp className="icon" />
                           </div>
                           <div className="addToCartDiv">
@@ -202,7 +202,7 @@ function HomePage() {
                             <p>{item.available}</p>
                           </div>
                           <div className="flex price-icon">
-                            <p>{item.price}</p>
+                            <p className="flex"><MdCurrencyRupee/>{item.price}</p>
                             <IoStarSharp className="icon" />
                           </div>
                           <div className="addToCartDiv">
@@ -245,7 +245,7 @@ function HomePage() {
                             <p>{item.available}</p>
                           </div>
                           <div className="flex price-icon">
-                            <p>{item.price}</p>
+                            <p className="flex"><MdCurrencyRupee/>{item.price}</p>
                             <IoStarSharp className="icon" />
                           </div>
                           <div className="addToCartDiv">
@@ -288,7 +288,7 @@ function HomePage() {
                             <p>{item.available}</p>
                           </div>
                           <div className="flex price-icon">
-                            <p>{item.price}</p>
+                            <p className="flex"><MdCurrencyRupee/>{item.price}</p>
                             <IoStarSharp className="icon" />
                           </div>
                           <div className="addToCartDiv">
@@ -331,7 +331,7 @@ function HomePage() {
                             <p>{item.available}</p>
                           </div>
                           <div className="flex price-icon">
-                            <p>{item.price}</p>
+                            <p className="flex"><MdCurrencyRupee/>{item.price}</p>
                             <IoStarSharp className="icon" />
                           </div>
                           <div className="addToCartDiv">
@@ -374,7 +374,7 @@ function HomePage() {
                             <p>{item.available}</p>
                           </div>
                           <div className="flex price-icon">
-                            <p>{item.price}</p>
+                            <p className="flex"><MdCurrencyRupee/>{item.price}</p>
                             <IoStarSharp className="icon" />
                           </div>
                           <div className="addToCartDiv">
@@ -417,7 +417,7 @@ function HomePage() {
                             <p>{item.available}</p>
                           </div>
                           <div className="flex price-icon">
-                            <p>{item.price}</p>
+                            <p className="flex"><MdCurrencyRupee/>{item.price}</p>
                             <IoStarSharp className="icon" />
                           </div>
                           <div className="addToCartDiv">
