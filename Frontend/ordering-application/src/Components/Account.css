@@ -71,3 +71,36 @@ body{
     text-decoration: none;
     color: black;
 }
+
+/* Profile page styles */
+
+.personal-data{
+    margin: 1.5vw 12vw;
+    border: 2px solid black;
+    border-radius: 5vw;
+    /* background: linear-gradient(to right, #4E6DA0 0.5px, transparent 1px),
+            linear-gradient(to bottom, #4E6DA0 0.5px, transparent 1px),
+            #EA9A3C;
+    background-size: 26px 26px; */
+    background-color: #EA9A3C;
+}
+
+.general-data{
+    margin: 2vw 3vw;
+    border: 2px solid black;
+    border-radius: 1.5vw;
+    background: linear-gradient(to right, rgb(223, 209, 169, 0.4) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(223, 209, 169, 0.4) 1px, transparent 1px),
+            #F8F5ED;
+    background-size: 2vw 2vw;
+}
+
+.general-data-content{
+    margin: 0vw 8vw;
+    justify-content: space-between;
+}
+
+.site-data{
+    justify-content: space-between;
+    margin: 1vw 14vw;
+}
