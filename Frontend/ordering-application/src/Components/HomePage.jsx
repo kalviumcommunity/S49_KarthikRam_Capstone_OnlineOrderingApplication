@@ -156,7 +156,7 @@ function HomePage() {
                         </div>
                         <div className="sub-div-two">
                           <div className="availability">
-                            <p>{item.available}True</p>
+                            {item.available == true?<p>Available</p> :<p>Not Available</p> }
                           </div>
                           <div className="flex price-icon">
                             <p className="flex"><MdCurrencyRupee/>{item.price}</p>
@@ -199,7 +199,7 @@ function HomePage() {
                         </div>
                         <div className="sub-div-two">
                           <div className="availability">
-                            <p>{item.available}</p>
+                            {item.available == true?<p>Available</p> :<p>Not Available</p> }
                           </div>
                           <div className="flex price-icon">
                             <p className="flex"><MdCurrencyRupee/>{item.price}</p>
@@ -242,7 +242,7 @@ function HomePage() {
                         </div>
                         <div className="sub-div-two">
                           <div className="availability">
-                            <p>{item.available}</p>
+                            {item.available == true?<p>Available</p> :<p>Not Available</p> }
                           </div>
                           <div className="flex price-icon">
                             <p className="flex"><MdCurrencyRupee/>{item.price}</p>
@@ -285,7 +285,7 @@ function HomePage() {
                         </div>
                         <div className="sub-div-two">
                           <div className="availability">
-                            <p>{item.available}</p>
+                            {item.available == true?<p>Available</p> :<p>Not Available</p> }
                           </div>
                           <div className="flex price-icon">
                             <p className="flex"><MdCurrencyRupee/>{item.price}</p>
@@ -328,7 +328,7 @@ function HomePage() {
                         </div>
                         <div className="sub-div-two">
                           <div className="availability">
-                            <p>{item.available}</p>
+                            {item.available == true?<p>Available</p> :<p>Not Available</p> }
                           </div>
                           <div className="flex price-icon">
                             <p className="flex"><MdCurrencyRupee/>{item.price}</p>
@@ -371,7 +371,7 @@ function HomePage() {
                         </div>
                         <div className="sub-div-two">
                           <div className="availability">
-                            <p>{item.available}</p>
+                            {item.available == true?<p>Available</p> :<p>Not Available</p> }
                           </div>
                           <div className="flex price-icon">
                             <p className="flex"><MdCurrencyRupee/>{item.price}</p>
@@ -414,7 +414,7 @@ function HomePage() {
                         </div>
                         <div className="sub-div-two">
                           <div className="availability">
-                            <p>{item.available}</p>
+                            {item.available == true?<p>Available</p> :<p>Not Available</p> }
                           </div>
                           <div className="flex price-icon">
                             <p className="flex"><MdCurrencyRupee/>{item.price}</p>
