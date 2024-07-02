@@ -28,6 +28,30 @@ import vegPulao from "./Images/vegPulao.png";
 import vada from "./Images/vada.png";
 import masalaVada from "./Images/masalaVada.png";
 
+export const allItems = {
+  eggDosa,
+  plainDosa,
+  gheeRoast,
+  masalaDosa,
+  podiDosa,
+  ravaDosa,
+  uttapam,
+  idli,
+  porotta,
+  vegKothuPorotta,
+  eggKothuPorotta,
+  omelette,
+  halfBoil,
+  fullBoil,
+  plainOmlette,
+  chapathi,
+  lemonRice,
+  pongal,
+  vegPulao,
+  vada,
+  masalaVada,
+}
+
 const DosaMap = {
   eggDosa,
   plainDosa,

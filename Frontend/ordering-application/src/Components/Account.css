@@ -104,3 +104,73 @@ body{
     justify-content: space-between;
     margin: 1vw 14vw;
 }
+
+/* Orders page styles */
+
+.orders{
+    border: 1px solid black;
+    margin: 1vw 6vw;
+    border-bottom: none;
+}
+
+.order-details{
+    background-color: white;
+    margin: 2vw 2vw 1vw 2vw;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1vw;
+}
+
+.order-details p{
+    color: #474747;
+    letter-spacing: 0.1vw;
+}
+
+.order-details h4{
+    font-size: 1.5vw;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+}
+
+.order-again-btn{
+    color: black;
+    background-color: white;
+}
+
+.bill-btn{
+    color: white;
+    background-color: black;
+}
+
+.buy-it-again-btn{
+    font-size: 1vw;
+    padding: 0.8vw 1vw;
+    border: 1px solid black;
+    border-radius: 1vw;
+    background-color: white;
+}
+
+.order-details-btn{
+    font-size: 1vw;
+    padding: 0.8vw 1vw;
+    border: 1px solid black;
+    border-radius: 1vw;
+}
+
+.buy-it-again-btn:hover, .order-details-btn:hover{
+    cursor: pointer;
+}
+
+.order-items{
+    border: 1px solid black;
+    background-color: white;
+    margin: 0vw 2vw 4vw 2vw;
+    justify-content: space-around;
+    border-radius: 1vw;
+}
+
+.order-items-top{
+    margin: 2vw 6vw;
+    justify-content: space-around;
+    align-items: center;
+}
