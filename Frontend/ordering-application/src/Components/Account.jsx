@@ -51,7 +51,7 @@ function Account() {
           </Link>
         </div>
         <div className="favourites account-grid-border">
-          <Link to="/account" className='link-style'>
+          <Link to="/favourites" className='link-style'>
             <div className="account-favourites-image account-gird-images flex">
               <IoStarSharp style={{fontSize: '7rem', color:'gold'}}/>
             </div>

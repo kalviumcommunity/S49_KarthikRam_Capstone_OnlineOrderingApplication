@@ -107,7 +107,7 @@ body{
 
 /* Orders page styles */
 
-.orders{
+.main-orders{
     border: 1px solid black;
     margin: 1vw 6vw;
     border-bottom: none;
@@ -173,4 +173,54 @@ body{
     margin: 2vw 6vw;
     justify-content: space-around;
     align-items: center;
+}
+
+/* Favourites page styles */
+
+.fav-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 6vw 4vw;
+}
+
+.fav-item{
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 1vw;
+}
+
+.fav-item-image-div{
+    margin: 2vw 0vw 0vw 0vw;
+    text-align: center;
+}
+
+.fav-item-image{
+    height: 10vw;
+    background-color: #F0EDE8;
+    border: 1px solid black;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+
+.fav-item-div-two{
+    margin: 0vw 2vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fav-icon{
+    color: gold;
+    font-size: 1.7rem;
+    stroke: black;
+    stroke-width: 5;
+}
+
+.fav-item-name{
+    font-weight: 600;
+    font-size: 1.4vw;
+    letter-spacing: 0.1vw;
+}
+
+.fav-item-price{
+    font-size: 1.2vw;
 }

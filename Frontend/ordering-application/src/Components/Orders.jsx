@@ -16,7 +16,7 @@ function Orders() {
   return (
     <div style={{margin: '2vw 6vw'}}>
       <h1 className='flex' style={{alignItems: 'center'}}><MdKeyboardArrowLeft className='back-icon' onClick={handleBack}/>Your Orders</h1>
-      <div className="orders">
+      <div className="main-orders">
         <div className="flex order-details">
           <div>
             <p>Order Date</p>
@@ -48,7 +48,7 @@ function Orders() {
             </div>
             <div style={{textAlign: 'center'}}>
               <h3 style={{display:'flex'}}><MdCurrencyRupee/>80</h3>
-              <button className="buy-it-again-btn">But It Again</button>
+              <button className="buy-it-again-btn">Buy It Again</button>
             </div>
           </div>
           <hr style={{ margin:'0vw 4vw 0vw 4vw', border: 'none',height: '2px',backgroundImage: 'linear-gradient(to right, black 50%, transparent 50%)',backgroundSize: '19px 1px', backgroundRepeat: 'repeat-x'}} />
@@ -60,7 +60,7 @@ function Orders() {
             </div>
             <div style={{textAlign: 'center'}}>
               <h3 style={{display:'flex'}}><MdCurrencyRupee/>80</h3>
-              <button className="buy-it-again-btn">But It Again</button>
+              <button className="buy-it-again-btn">Buy It Again</button>
             </div>
           </div>
           <hr style={{ margin:'0vw 4vw 0vw 4vw', border: 'none',height: '2px',backgroundImage: 'linear-gradient(to right, black 50%, transparent 50%)',backgroundSize: '19px 1px', backgroundRepeat: 'repeat-x'}} />
